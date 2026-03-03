@@ -7,13 +7,7 @@
       "date": "2025-12-28",
       "author": "Sunil Khobragade",
       "imageId": "blog-year-review",
-      "tags": [
-        "Web Development",
-        "2025 Review",
-        "Trends",
-        "Technology",
-        "AI"
-      ],
+      "tags": ["Web Development", "2025 Review", "Trends", "Technology", "AI"],
       "content": "<h2>A Transformative Year</h2><p>2025 was a year of rapid evolution in web development, driven by advancements in AI, a focus on performance, and the maturation of existing frameworks. Teams leaned into hybrid rendering models, blending edge- and server-side rendering with client-side hydration to deliver both speed and interactivity. AI-assisted tooling moved from novelty to everyday practice: code generation, test suggestion, and observability-assisted debugging became part of the standard workflow.</p><p>Developers also wrestled with complexity: micro-frontends saw a resurgence in organizations that needed independent deployability, while platform engineering teams standardized developer experiences with internal platforms. Accessibility and privacy were not afterthoughts — browsers and frameworks added features to make compliance easier, and the community pushed for better defaults.</p><p>Performance remained paramount. Techniques such as granular code-splitting, resource prioritization, and image optimization were not optional. Edge computing matured, enabling personalized content at PoPs and reducing latency. Below we look at several concrete lessons and practical techniques developers adopted in 2025.</p>"
     },
     {
@@ -23,13 +17,7 @@
       "date": "2025-12-22",
       "author": "Sunil Khobragade",
       "imageId": "blog-predictions",
-      "tags": [
-        "Predictions",
-        "2026",
-        "Future Tech",
-        "AI",
-        "Spatial Computing"
-      ],
+      "tags": ["Predictions", "2026", "Future Tech", "AI", "Spatial Computing"],
       "content": "<h2>What's Next on the Horizon?</h2><p>As we look ahead to 2026, several trends feel inevitable: tighter integration between developer tooling and AI, the rise of ambient compute models that blur the lines between devices, and the growth of platform engineering as teams invest in DX. Organizations will accelerate refactoring efforts using AI-assisted code transforms, reducing the cost of modernizing legacy systems.</p><p>Privacy-preserving machine learning and on-device inference will become more common, shifting some workloads away from centralized clouds. Spatial computing and mixed reality remain niche for consumer experiences, but enterprise adoption for training and collaboration will expand.</p><p>Finally, sustainability and cost-awareness will push engineers to optimize efficiency both in code and infrastructure choices. Expect greater emphasis on carbon-aware deployments and resource-conscious defaults in cloud platforms.</p>"
     },
     {
@@ -39,13 +27,7 @@
       "date": "2025-12-18",
       "author": "Sunil Khobragade",
       "imageId": "blog-open-source",
-      "tags": [
-        "Open Source",
-        "Git",
-        "GitHub",
-        "Community",
-        "Career"
-      ],
+      "tags": ["Open Source", "Git", "GitHub", "Community", "Career"],
       "content": "<h2>Why Contribute to Open Source?</h2><p>Contributing to open source is one of the fastest ways to learn, grow your network, and give back. Start by finding projects that align with your interests and where maintainers welcome newcomers. Look for labels like 'good first issue' or 'help wanted' and read contribution guidelines carefully. Set up the project locally, run tests, and look for small, focused fixes to begin with.</p><p>When preparing a pull request, write a clear description, include tests if possible, and be responsive to feedback. Maintain a respectful tone in discussions and remember that maintainers are often volunteers; patience and clear communication go a long way.</p>"
     },
     {
@@ -55,13 +37,7 @@
       "date": "2025-12-12",
       "author": "Sunil Khobragade",
       "imageId": "blog-dev-tools",
-      "tags": [
-        "Productivity",
-        "Developer Tools",
-        "Software",
-        "AI",
-        "VSCode"
-      ],
+      "tags": ["Productivity", "Developer Tools", "Software", "AI", "VSCode"],
       "content": "<h2>Sharpening the Saw</h2><p>Tooling can amplify developer productivity dramatically. Modern IDEs with AI-assisted completion, fast terminal emulators, and robust CLI tooling are essential. I prefer tools that integrate well into CI pipelines and expose automation APIs so teams can create reproducible workflows. A good developer platform reduces context switching and makes common tasks one command away.</p>"
     },
     {
@@ -87,12 +63,7 @@
       "date": "2025-12-27",
       "author": "Sunil Khobragade",
       "imageId": "blog-typescript",
-      "tags": [
-        "TypeScript",
-        "JavaScript",
-        "Frontend",
-        "Types"
-      ],
+      "tags": ["TypeScript", "JavaScript", "Frontend", "Types"],
       "content": "<h2>Why Types Matter</h2><p>TypeScript brings static types to JavaScript, catching errors early and improving maintainability. Start by enabling strict mode and adopting narrow types. Use discriminated unions for variant data, and prefer readonly where mutation isn't needed. For large codebases, introduce gradual typing and prioritize high-risk modules during migration.</p><p>Example: a discriminated union that models API responses helps TypeScript narrow types within switch statements and reduces runtime checks.</p><pre><code class=\"language-typescript\">type Success = { status: 'ok'; value: string };\ntype Error = { status: 'error'; message: string };\nfunction handle(r: Success | Error) {\n  if (r.status === 'ok') {\n    console.log(r.value);\n  } else {\n    console.error(r.message);\n  }\n}\n</code></pre>"
     },
     {
@@ -102,12 +73,7 @@
       "date": "2025-12-26",
       "author": "Sunil Khobragade",
       "imageId": "blog-wasm",
-      "tags": [
-        "WebAssembly",
-        "Wasm",
-        "Performance",
-        "Frontend"
-      ],
+      "tags": ["WebAssembly", "Wasm", "Performance", "Frontend"],
       "content": "<h2>Where Wasm Excels</h2><p>WebAssembly shines for compute-heavy tasks where JS is a bottleneck: image processing, codecs, cryptography, and games. Keep the interface small — call into Wasm for hot loops and return simple data structures. Use streaming compilation and wasm-bindgen or similar toolchains to ease interop. Benchmark carefully: the overhead of crossing the JS/Wasm boundary can outweigh gains for small tasks.</p>"
     },
     {
@@ -117,12 +83,7 @@
       "date": "2025-12-25",
       "author": "Sunil Khobragade",
       "imageId": "blog-a11y",
-      "tags": [
-        "Accessibility",
-        "A11y",
-        "Frontend",
-        "UX"
-      ],
+      "tags": ["Accessibility", "A11y", "Frontend", "UX"],
       "content": "<h2>Accessibility is Non-Negotiable</h2><p>Ensure semantic HTML, provide alt text for images, and use ARIA only when semantics aren't enough. Test with keyboard navigation and screen readers. Automated tools catch low-hanging fruit, but manual testing is essential.</p><pre><code class=\"language-html\">&lt;!-- good: semantic button --&gt;\n<button>Save</button>\n</code></pre>"
     },
     {
@@ -132,12 +93,7 @@
       "date": "2025-12-24",
       "author": "Sunil Khobragade",
       "imageId": "blog-graphql",
-      "tags": [
-        "GraphQL",
-        "API",
-        "Backend",
-        "Caching"
-      ],
+      "tags": ["GraphQL", "API", "Backend", "Caching"],
       "content": "<h2>Designing for Stability</h2><p>Design GraphQL schemas with clear boundaries and avoid deep nested queries that cause N+1 issues. Use dataloader patterns to batch database requests and add query complexity limits. Cache responses at the field or operation level when practical, and consider persisted queries for improved performance and security.</p>"
     },
     {
@@ -147,12 +103,7 @@
       "date": "2025-12-23",
       "author": "Sunil Khobragade",
       "imageId": "blog-ssr",
-      "tags": [
-        "SSR",
-        "Edge",
-        "Performance",
-        "Next.js"
-      ],
+      "tags": ["SSR", "Edge", "Performance", "Next.js"],
       "content": "<h2>SSR vs ISR vs Edge</h2><p>SSR provides fresh content at request time but can add latency. ISR gives a middle ground by serving a cached static page and revalidating in the background. Edge rendering pushes computation to PoPs for low latency. Choose based on content volatility, personalization needs, and cost.</p>"
     },
     {
@@ -162,12 +113,7 @@
       "date": "2025-12-21",
       "author": "Sunil Khobragade",
       "imageId": "blog-performance-budgets",
-      "tags": [
-        "Performance",
-        "Web Vitals",
-        "CI",
-        "Optimization"
-      ],
+      "tags": ["Performance", "Web Vitals", "CI", "Optimization"],
       "content": "<h2>Why Budgets Work</h2><p>Performance budgets set measurable limits (e.g., bundle size, TTFB) so teams make trade-offs explicitly. Enforce budgets in CI with Lighthouse or custom checks and fail builds when budgets are exceeded. Prioritize critical resources and defer nonessential work.</p>"
     },
     {
@@ -177,12 +123,7 @@
       "date": "2025-12-20",
       "author": "Sunil Khobragade",
       "imageId": "blog-ci-cd",
-      "tags": [
-        "CI/CD",
-        "DevOps",
-        "Pipelines",
-        "Deployment"
-      ],
+      "tags": ["CI/CD", "DevOps", "Pipelines", "Deployment"],
       "content": "<h2>Automate Everything That Can Be Automated</h2><p>Pipelines should validate code quality, run unit and integration tests, and run security scans. Use isolated environments for acceptance tests and incorporate canary deployments or feature flags to roll out changes safely. Automate rollbacks when health checks fail.</p>"
     },
     {
@@ -192,12 +133,7 @@
       "date": "2025-12-19",
       "author": "Sunil Khobragade",
       "imageId": "blog-iac",
-      "tags": [
-        "Terraform",
-        "IaC",
-        "Cloud",
-        "DevOps"
-      ],
+      "tags": ["Terraform", "IaC", "Cloud", "DevOps"],
       "content": "<h2>Repeatable Infrastructure</h2><p>Terraform lets teams codify infrastructure and enable peer review for changes. Use remote state with locking, design small modules with clear interfaces, and test modules with tools like terratest. Be careful when importing existing resources — always plan and review state changes before apply.</p>"
     },
     {
@@ -207,12 +143,7 @@
       "date": "2025-12-17",
       "author": "Sunil Khobragade",
       "imageId": "blog-observability",
-      "tags": [
-        "Observability",
-        "Logging",
-        "Tracing",
-        "Monitoring"
-      ],
+      "tags": ["Observability", "Logging", "Tracing", "Monitoring"],
       "content": "<h2>Signal Over Noise</h2><p>Structured logs, instrumented traces, and key business and system metrics form the pillars of observability. Correlate logs with traces using trace IDs, and use sampling wisely to keep costs manageable. Alerts should be actionable — tune thresholds and reduce noise with composite alerts or anomaly detection.</p>"
     },
     {
@@ -222,11 +153,7 @@
       "date": "2025-12-16",
       "author": "Sunil Khobragade",
       "imageId": "blog-feature-flags",
-      "tags": [
-        "Feature Flags",
-        "Release Management",
-        "Experimentation"
-      ],
+      "tags": ["Feature Flags", "Release Management", "Experimentation"],
       "content": "<h2>Control Releases with Flags</h2><p>Feature flags enable targeted rollouts and A/B testing. Build flagging into your SDKs, ensure flags default to safe values, and implement kill switches for rollback. Use analytics to measure impact and remove flags when no longer needed to avoid technical debt.</p>"
     },
     {
@@ -236,12 +163,7 @@
       "date": "2025-12-15",
       "author": "Sunil Khobragade",
       "imageId": "blog-event-driven",
-      "tags": [
-        "Architecture",
-        "Events",
-        "Kafka",
-        "Messaging"
-      ],
+      "tags": ["Architecture", "Events", "Kafka", "Messaging"],
       "content": "<h2>Designing for Asynchrony</h2><p>Event-driven systems decouple producers and consumers and scale well when designed with idempotency and durable storage. Use compact event schemas, version them, and provide schema registries when needed. Handle duplicates and out-of-order deliveries gracefully.</p>"
     },
     {
@@ -251,11 +173,7 @@
       "date": "2025-12-14",
       "author": "Sunil Khobragade",
       "imageId": "blog-data-modeling",
-      "tags": [
-        "Data Modeling",
-        "Database",
-        "Design"
-      ],
+      "tags": ["Data Modeling", "Database", "Design"],
       "content": "<h2>Balance Theory and Pragmatism</h2><p>Normalization reduces duplication and keeps data consistent, but denormalization can improve read performance. Choose based on access patterns. For time-series data prefer specialized stores; for flexible document shapes prefer document databases. Always model for the common case first and optimize based on metrics.</p>"
     },
     {
@@ -265,12 +183,7 @@
       "date": "2025-12-13",
       "author": "Sunil Khobragade",
       "imageId": "blog-security-headers",
-      "tags": [
-        "Security",
-        "CSP",
-        "HSTS",
-        "Web"
-      ],
+      "tags": ["Security", "CSP", "HSTS", "Web"],
       "content": "<h2>Start with Defaults</h2><p>Implement HSTS to enforce HTTPS, use CSP to limit resource loading and reduce XSS risk, and set X-Frame-Options to prevent clickjacking. Deploy headers gradually and monitor violations; CSP reports help you find resources that need updating. Keep cookies secure with SameSite and HttpOnly flags.</p>"
     },
     {
@@ -280,11 +193,7 @@
       "date": "2025-12-11",
       "author": "Sunil Khobragade",
       "imageId": "blog-rate-limiting",
-      "tags": [
-        "API",
-        "Rate Limiting",
-        "Security"
-      ],
+      "tags": ["API", "Rate Limiting", "Security"],
       "content": "<h2>Protect and Throttle</h2><p>Choose a limiting strategy that matches your SLA. Token bucket algorithms are flexible for bursts; leaky bucket smooths traffic. For distributed systems, use a central store or consistent hashing to approximate limits across nodes. Expose helpful headers (X-RateLimit-Remaining) to clients and provide generous retry guidance.</p>"
     },
     {
@@ -294,11 +203,7 @@
       "date": "2025-12-10",
       "author": "Sunil Khobragade",
       "imageId": "blog-image-opt",
-      "tags": [
-        "Images",
-        "Optimization",
-        "Performance"
-      ],
+      "tags": ["Images", "Optimization", "Performance"],
       "content": "<h2>Serve the Right Image</h2><p>Use AVIF/WebP where supported, deliver appropriately sized images with srcset, and enable lazy loading for below-the-fold content. Consider CDN-powered image resizing and cache-control strategies. Always measure trade-offs — AVIF has great compression but may cost CPU to transcode on the fly.</p>"
     },
     {
@@ -308,11 +213,7 @@
       "date": "2025-12-09",
       "author": "Sunil Khobragade",
       "imageId": "blog-i18n",
-      "tags": [
-        "i18n",
-        "Localization",
-        "UX"
-      ],
+      "tags": ["i18n", "Localization", "UX"],
       "content": "<h2>Design for Global Users</h2><p>Separate content from code, use locale-aware formatting libraries, and support pluralization rules. Keep translations in source-controlled files or a translation service and automate sync. Remember right-to-left layouts and cultural conventions when designing UIs.</p>"
     },
     {
@@ -322,12 +223,7 @@
       "date": "2025-12-08",
       "author": "Sunil Khobragade",
       "imageId": "blog-edge-cache",
-      "tags": [
-        "Edge",
-        "CDN",
-        "Caching",
-        "Performance"
-      ],
+      "tags": ["Edge", "CDN", "Caching", "Performance"],
       "content": "<h2>Cache Intelligently</h2><p>Compute cache keys that include only the necessary dimensions (e.g., locale, device type). Use stale-while-revalidate to serve fast responses while updating caches in the background. For personalized content, combine edge caching with short-lived tokens or edge-side includes to avoid cache fragmentation.</p>"
     }
   ]

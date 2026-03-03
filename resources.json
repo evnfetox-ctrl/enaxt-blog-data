@@ -1,0 +1,446 @@
+
+{
+  "resources": [
+    {
+      "id": "saas-security-checklist",
+      "title": "SaaS Security Hardening Checklist",
+      "description": "A comprehensive 50-point checklist to secure your web application from Day 1. Covers OWASP Top 10, Auth protocols, and Cloud Infrastructure hardening.",
+      "type": "Document",
+      "category": "Security",
+      "tags": ["Security", "SaaS", "DevOps"],
+      "fileName": "saas-security-checklist.pdf"
+    },
+    {
+      "id": "nextjs-performance-playbook",
+      "title": "The Next.js 15 Performance Playbook",
+      "description": "The ultimate engineering guide to achieving 100/100 Lighthouse scores. Includes real-world configuration snippets for LCP and TBT optimization.",
+      "type": "Document",
+      "category": "Performance",
+      "tags": ["Next.js", "Performance", "Frontend"],
+      "fileName": "nextjs-performance-guide.pdf"
+    },
+    {
+      "id": "ai-integration-whitepaper",
+      "title": "AI Agents Architecture Whitepaper",
+      "description": "A strategic overview of integrating LLMs into your product roadmap. Learn how to implement RAG patterns while maintaining low latency.",
+      "type": "Document",
+      "category": "AI",
+      "tags": ["AI", "Architecture", "Cloud"],
+      "fileName": "ai-integration-whitepaper.pdf"
+    },
+    {
+      "id": "nextjs-docs",
+      "title": "Next.js Official Documentation",
+      "description": "The foundation for building modern web applications with React and the App Router.",
+      "type": "Link",
+      "category": "Next.js",
+      "url": "https://nextjs.org/docs",
+      "tags": ["Next.js", "React", "Frontend"]
+    },
+    {
+      "id": "owasp-top-10",
+      "title": "OWASP Top 10 Project",
+      "description": "The definitive guide to the most critical web application security risks.",
+      "type": "Document",
+      "category": "Cybersecurity",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "tags": ["Security", "Web", "Standard"]
+    },
+    {
+      "id": "genkit-docs",
+      "title": "Firebase Genkit Documentation",
+      "description": "Build production-ready AI features with Google's latest AI framework for developers.",
+      "type": "Link",
+      "category": "AI",
+      "url": "https://firebase.google.com/docs/genkit",
+      "tags": ["AI", "Genkit", "Google"]
+    },
+    {
+      "id": "portswigger-academy",
+      "title": "Web Security Academy",
+      "description": "Free online training for web application security, used by professionals worldwide.",
+      "type": "Tutorial",
+      "category": "Cybersecurity",
+      "url": "https://portswigger.net/web-security",
+      "tags": ["Security", "Training", "Burp Suite"]
+    },
+    {
+      "id": "react-patterns",
+      "title": "React Design Patterns",
+      "description": "Common patterns and best practices for building scalable React applications.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://www.patterns.dev/react",
+      "tags": ["React", "JavaScript", "Design"]
+    },
+    {
+      "id": "prisma-docs",
+      "title": "Prisma ORM Guide",
+      "description": "Modern database toolkit for TypeScript and Node.js, making databases easy.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://www.prisma.io/docs",
+      "tags": ["Database", "TypeScript", "Backend"]
+    },
+    {
+      "id": "tailwindcss-docs",
+      "title": "Tailwind CSS Documentation",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://tailwindcss.com/docs",
+      "tags": ["CSS", "Design", "Frontend"]
+    },
+    {
+      "id": "shadcn-ui",
+      "title": "ShadCN UI Components",
+      "description": "Beautifully designed components built with Radix UI and Tailwind CSS.",
+      "type": "Tool",
+      "category": "Full-Stack Development",
+      "url": "https://ui.shadcn.com/",
+      "tags": ["UI", "Components", "React"]
+    },
+    {
+      "id": "vercel-templates",
+      "title": "Vercel Project Templates",
+      "description": "Jumpstart your next project with professionally built templates for every stack.",
+      "type": "Link",
+      "category": "Hosting",
+      "url": "https://vercel.com/templates",
+      "tags": ["Hosting", "Next.js", "Starter"]
+    },
+    {
+      "id": "google-web-vitals",
+      "title": "Core Web Vitals Guide",
+      "description": "Essential metrics for a healthy site according to Google's performance team.",
+      "type": "Document",
+      "category": "SEO",
+      "url": "https://web.dev/vitals/",
+      "tags": ["Performance", "SEO", "Google"]
+    },
+    {
+      "id": "security-headers-analyzer",
+      "title": "Security Headers Analyzer",
+      "description": "Analyze your website's HTTP response headers for security best practices.",
+      "type": "Tool",
+      "category": "Cybersecurity",
+      "url": "https://securityheaders.com/",
+      "tags": ["Security", "Headers", "Audit"]
+    },
+    {
+      "id": "huggingface-models",
+      "title": "Hugging Face Model Hub",
+      "description": "The community for building, training and deploying state-of-the-art machine learning models.",
+      "type": "Link",
+      "category": "AI",
+      "url": "https://huggingface.co/models",
+      "tags": ["AI", "ML", "Models"]
+    },
+    {
+      "id": "pinecone-vector-db",
+      "title": "Pinecone Vector Database",
+      "description": "A vector database for building high-performance AI applications with ease.",
+      "type": "Tool",
+      "category": "AI",
+      "url": "https://www.pinecone.io/",
+      "tags": ["AI", "Database", "Search"]
+    },
+    {
+      "id": "aws-well-architected",
+      "title": "AWS Well-Architected Framework",
+      "description": "Design principles and architectural best practices for the cloud.",
+      "type": "Document",
+      "category": "Hosting",
+      "url": "https://aws.amazon.com/architecture/well-architected/",
+      "tags": ["AWS", "Cloud", "Best Practices"]
+    },
+    {
+      "id": "docker-handbook",
+      "title": "The Docker Handbook",
+      "description": "A clear, hands-on guide to mastering containers and containerization.",
+      "type": "Tutorial",
+      "category": "Hosting",
+      "url": "https://www.freecodecamp.org/news/the-docker-handbook/",
+      "tags": ["Docker", "DevOps", "Containers"]
+    },
+    {
+      "id": "kubernetes-basics",
+      "title": "Kubernetes Basics",
+      "description": "Learn the core concepts of orchestrating containers at scale.",
+      "type": "Tutorial",
+      "category": "Hosting",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      "tags": ["K8s", "DevOps", "Orchestration"]
+    },
+    {
+      "id": "typescript-deep-dive",
+      "title": "TypeScript Deep Dive",
+      "description": "The definitive guide to the TypeScript language and ecosystem.",
+      "type": "Document",
+      "category": "Full-Stack Development",
+      "url": "https://basarat.gitbook.io/typescript/",
+      "tags": ["TypeScript", "JS", "Language"]
+    },
+    {
+      "id": "node-best-practices",
+      "title": "Node.js Best Practices",
+      "description": "The largest guide about Node.js architecture and security.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://github.com/goldbergyoni/nodebestpractices",
+      "tags": ["Node.js", "Backend", "Architecture"]
+    },
+    {
+      "id": "mongo-university",
+      "title": "MongoDB University",
+      "description": "Free courses from the creators of the leading NoSQL database.",
+      "type": "Tutorial",
+      "category": "Full-Stack Development",
+      "url": "https://learn.mongodb.com/",
+      "tags": ["NoSQL", "Database", "MongoDB"]
+    },
+    {
+      "id": "postgres-tutorial",
+      "title": "PostgreSQL Mastery",
+      "description": "Comprehensive tutorial for the world's most advanced open-source database.",
+      "type": "Tutorial",
+      "category": "Full-Stack Development",
+      "url": "https://www.postgresqltutorial.com/",
+      "tags": ["SQL", "Database", "Postgres"]
+    },
+    {
+      "id": "auth0-security-hub",
+      "title": "Identity & Security Hub",
+      "description": "Deep dives into OAuth 2.0, OpenID Connect, and modern authentication.",
+      "type": "Link",
+      "category": "Cybersecurity",
+      "url": "https://auth0.com/blog/",
+      "tags": ["Auth", "Security", "Identity"]
+    },
+    {
+      "id": "exploit-db",
+      "title": "Exploit Database",
+      "description": "The ultimate archive of public exploits and security research.",
+      "type": "Tool",
+      "category": "Cybersecurity",
+      "url": "https://www.exploit-db.com/",
+      "tags": ["Security", "Exploits", "PenTest"]
+    },
+    {
+      "id": "cybersecurity-roadmap",
+      "title": "Cybersecurity Roadmap 2025",
+      "description": "A visual guide to becoming a security specialist in the current landscape.",
+      "type": "Link",
+      "category": "Cybersecurity",
+      "url": "https://roadmap.sh/cyber-security",
+      "tags": ["Security", "Roadmap", "Career"]
+    },
+    {
+      "id": "langchain-docs",
+      "title": "LangChain Documentation",
+      "description": "Building LLM-powered applications with chain-of-thought logic.",
+      "type": "Link",
+      "category": "AI",
+      "url": "https://python.langchain.com/docs/get_started/introduction",
+      "tags": ["AI", "Python", "LLM"]
+    },
+    {
+      "id": "prompt-engineering-guide",
+      "title": "Prompt Engineering Guide",
+      "description": "Master the art of communicating with Large Language Models.",
+      "type": "Document",
+      "category": "AI",
+      "url": "https://www.promptingguide.ai/",
+      "tags": ["AI", "Prompts", "LLM"]
+    },
+    {
+      "id": "open-api-spec",
+      "title": "OpenAPI Specification",
+      "description": "The standard for describing RESTful APIs in a language-agnostic way.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://www.openapis.org/",
+      "tags": ["API", "Backend", "Standards"]
+    },
+    {
+      "id": "graphql-academy",
+      "title": "GraphQL Academy",
+      "description": "Learn to build and consume GraphQL APIs effectively.",
+      "type": "Tutorial",
+      "category": "Full-Stack Development",
+      "url": "https://www.howtographql.com/",
+      "tags": ["API", "GraphQL", "Frontend"]
+    },
+    {
+      "id": "nextjs-learn-dashboard",
+      "title": "Next.js Dashboard Tutorial",
+      "description": "The official tutorial to build a full-stack dashboard with Auth and DB.",
+      "type": "Tutorial",
+      "category": "Next.js",
+      "url": "https://nextjs.org/learn",
+      "tags": ["Next.js", "React", "Tutorial"]
+    },
+    {
+      "id": "vercel-ai-sdk",
+      "title": "Vercel AI SDK",
+      "description": "Build AI-powered user interfaces with React, Svelte, and Vue.",
+      "type": "Tool",
+      "category": "AI",
+      "url": "https://sdk.vercel.ai/docs",
+      "tags": ["AI", "Vercel", "Frontend"]
+    },
+    {
+      "id": "semrush-seo-basics",
+      "title": "SEO Fundamentals",
+      "description": "Master the basics of search engine optimization for any site.",
+      "type": "Tutorial",
+      "category": "SEO",
+      "url": "https://www.semrush.com/blog/seo-basics/",
+      "tags": ["SEO", "Marketing", "Content"]
+    },
+    {
+      "id": "ahrefs-backlink-checker",
+      "title": "Free Backlink Checker",
+      "description": "See which websites are linking to your competitors.",
+      "type": "Tool",
+      "category": "SEO",
+      "url": "https://ahrefs.com/backlink-checker",
+      "tags": ["SEO", "Audit", "Growth"]
+    },
+    {
+      "id": "firebase-console",
+      "title": "Firebase Developer Console",
+      "description": "The portal to manage your serverless infrastructure and Genkit apps.",
+      "type": "Tool",
+      "category": "Hosting",
+      "url": "https://console.firebase.google.com/",
+      "tags": ["Firebase", "Google", "Hosting"]
+    },
+    {
+      "id": "strapi-headless-cms",
+      "title": "Strapi Headless CMS",
+      "description": "Manage your content easily and serve it via API to any frontend.",
+      "type": "Tool",
+      "category": "Full-Stack Development",
+      "url": "https://strapi.io/",
+      "tags": ["CMS", "Backend", "JavaScript"]
+    },
+    {
+      "id": "stripe-developers",
+      "title": "Stripe API Reference",
+      "description": "Build high-conversion checkouts and manage global payments.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://stripe.com/docs/api",
+      "tags": ["Payments", "API", "E-commerce"]
+    },
+    {
+      "id": "developer-security-checklist",
+      "title": "Developer Security Checklist",
+      "description": "A quick-reference guide for devs to secure their code daily.",
+      "type": "Document",
+      "category": "Cybersecurity",
+      "url": "https://www.sqreen.com/checklists/developer-security-checklist",
+      "tags": ["Security", "Devs", "Reference"]
+    },
+    {
+      "id": "ai-video-generation-veo",
+      "title": "Google Veo (Video Generation)",
+      "description": "Exploring Google's latest high-quality video generation model.",
+      "type": "Link",
+      "category": "AI",
+      "url": "https://deepmind.google/technologies/veo/",
+      "tags": ["AI", "Video", "Creative"]
+    },
+    {
+      "id": "supabase-docs",
+      "title": "Supabase (The Open Source Firebase)",
+      "description": "Build production-ready apps with Postgres and Realtime features.",
+      "type": "Link",
+      "category": "Hosting",
+      "url": "https://supabase.com/docs",
+      "tags": ["Postgres", "Database", "Hosting"]
+    },
+    {
+      "id": "nextjs-caching-guide",
+      "title": "Next.js Caching Strategies",
+      "description": "Deep dive into Request Memoization, Data Cache, and Full Route Cache.",
+      "type": "Document",
+      "category": "Next.js",
+      "url": "https://nextjs.org/docs/app/building-your-application/caching",
+      "tags": ["Next.js", "Performance", "Cache"]
+    },
+    {
+      "id": "lighthouse-ci",
+      "title": "Lighthouse CI",
+      "description": "Automate performance testing within your GitHub Actions pipeline.",
+      "type": "Tool",
+      "category": "SEO",
+      "url": "https://github.com/GoogleChrome/lighthouse-ci",
+      "tags": ["CI/CD", "Performance", "Google"]
+    },
+    {
+      "id": "react-query-docs",
+      "title": "TanStack Query (React Query)",
+      "description": "Powerful asynchronous state management for TS/JS and more.",
+      "type": "Tool",
+      "category": "Full-Stack Development",
+      "url": "https://tanstack.com/query/latest",
+      "tags": ["React", "Data", "State"]
+    },
+    {
+      "id": "framer-motion-api",
+      "title": "Framer Motion API",
+      "description": "The production-ready motion library for React.",
+      "type": "Link",
+      "category": "Full-Stack Development",
+      "url": "https://www.framer.com/motion/",
+      "tags": ["Animation", "React", "UX"]
+    },
+    {
+      "id": "owasp-asvs",
+      "title": "Application Security Verification Standard",
+      "description": "A framework of security requirements and controls for architects.",
+      "type": "Document",
+      "category": "Cybersecurity",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "tags": ["Security", "Standards", "Arch"]
+    },
+    {
+      "id": "ai-news-weekly",
+      "title": "The Batch (AI Weekly)",
+      "description": "Stay updated with the most important news in AI from Andrew Ng.",
+      "type": "Link",
+      "category": "AI",
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "tags": ["AI", "News", "Learning"]
+    },
+    {
+      "id": "git-flight-rules",
+      "title": "Git Flight Rules",
+      "description": "A guide for astronauts (and developers) on what to do when things go wrong with Git.",
+      "type": "Document",
+      "category": "Full-Stack Development",
+      "url": "https://github.com/k88hudson/git-flight-rules",
+      "tags": ["Git", "DevOps", "DevTools"]
+    },
+    {
+      "id": "web-security-map",
+      "title": "The Web Security Map",
+      "description": "Visualizing how modern security protocols work together.",
+      "type": "Link",
+      "category": "Cybersecurity",
+      "url": "https://cheatsheetseries.owasp.org/",
+      "tags": ["Security", "CheatSheet", "Web"]
+    },
+    {
+      "id": "nextjs-server-actions-best-practices",
+      "title": "Server Actions Masterclass",
+      "description": "Learn to build forms and mutations without API endpoints.",
+      "type": "Document",
+      "category": "Next.js",
+      "url": "https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations",
+      "tags": ["Next.js", "Server", "Auth"]
+    }
+  ]
+}

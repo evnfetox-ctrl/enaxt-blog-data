@@ -1,1 +1,266 @@
-{"blogs":[{"slug":"crdts-for-real-time-collaboration","title":"Collaborate in Real-Time: A Developer's Guide to CRDTs","description":"Dive into Conflict-Free Replicated Data Types (CRDTs), the magic behind real-time collaborative apps like Google Docs, and learn how they enable seamless offline editing.","date":"2025-11-28","author":"Sunil Khobragade","imageId":"blog-crdt","tags":["CRDTs","Real-Time","Collaboration","Distributed Systems","Architecture"],"content":"<h2>The Challenge of Real-Time Collaboration</h2><p>Building applications where multiple users can edit the same document simultaneously is incredibly complex. How do you merge changes made while users are offline or working concurrently? Conflict-Free Replicated Data Types (CRDTs) are one of the most robust approaches. They provide mathematically proven merge rules so that replicas converge to the same state without requiring locks or centralized coordination.</p><p>CRDTs come in state-based and operation-based flavors. For sequences (text), structures like RGA or LSEQ attach positional identifiers to characters so concurrent inserts can be ordered deterministically. Use battle-tested libraries (Automerge, Yjs) for production.</p><pre><code class=\"language-javascript\">class GCounter {\n  constructor(id, state = {}) { this.id = id; this.state = { ...state }; if (!(this.id in this.state)) this.state[this.id] = 0; }\n  increment(n = 1) { this.state[this.id] = (this.state[this.id] || 0) + n; }\n  value() { return Object.values(this.state).reduce((a,b)=>a+b,0); }\n  merge(other) { for (const [k,v] of Object.entries(other.state)) { this.state[k] = Math.max(this.state[k] || 0, v); } }\n}\n</code></pre>"},{"slug":"advanced-prompt-engineering-for-ai-agents","title":"Advanced Prompt Engineering for AI Agents","description":"Go beyond simple prompts. Learn advanced techniques like Chain-of-Thought, ReAct, and tool definition to build more powerful and reliable AI agents.","date":"2025-11-25","author":"Sunil Khobragade","imageId":"blog-prompt-engineering","tags":["AI","Prompt Engineering","LLM","AI Agents","Genkit"],"content":"<h2>Unlocking the Power of LLMs</h2><p>Prompt engineering guides LLMs to produce better outputs. Combine system instructions, examples, and constraints; when accuracy matters, pair LLM outputs with deterministic verification.</p><pre><code class=\"language-javascript\">async function agent(prompt, tools) {\n  if (prompt.includes('calc:')) {\n    const expr = prompt.split('calc:')[1].trim();\n    return tools.calc(expr);\n  }\n  return 'I need more info.';\n}\nconst tools = { calc: (expr)=>{ try{ return eval(expr).toString(); }catch(e){return 'error';} } }\n</code></pre>"},{"slug":"serverless-security-best-practices","title":"Securing Your Serverless Functions: A Guide","description":"Serverless architectures introduce new security challenges. Learn how to protect your functions from common vulnerabilities like event injection, insecure dependencies, and excessive privileges.","date":"2025-11-20","author":"Sunil Khobragade","imageId":"blog-serverless-security","tags":["Serverless","Security","AWS Lambda","Cloud","DevOps"],"content":"<h2>A New Security Paradigm</h2><p>Serverless shifts the attack surface. Use least-privilege IAM roles, validate event inputs, avoid secrets in code, and scan dependencies. Monitor with structured logs and tracing.</p><pre><code class=\"language-javascript\">exports.handler = async(event)=>{\n  const body = JSON.parse(event.body || '{}');\n  if (typeof body.username !== 'string' || body.username.length > 100) {\n    return { statusCode: 400, body: 'invalid username' };\n  }\n  return { statusCode: 200, body: 'ok' };\n};\n</code></pre>"},{"slug":"edge-computing-for-web-developers","title":"The Edge is Calling: What Edge Computing Means for Web Developers","description":"Move beyond the centralized cloud. Learn how edge computing runs your code closer to your users, delivering ultra-low latency and enabling a new class of high-performance applications.","date":"2025-11-15","author":"Sunil Khobragade","imageId":"blog-edge-computing","tags":["Edge Computing","Performance","Cloudflare","Next.js","Architecture"],"content":"<h2>The Need for Speed</h2><p>Edge runtimes reduce latency by running code near users. Optimize for startup time, avoid heavy native dependencies, and design data strategies for eventual consistency.</p><pre><code class=\"language-javascript\">addEventListener('fetch', event => {\n  event.respondWith(new Response('Hello from the edge', { headers: { 'content-type': 'text/plain' } }));\n});\n</code></pre>"},{"slug":"modern-css-a-look-at-container-queries","title":"Modern CSS is Here: A Look at Container Queries","description":"Break free from viewport-based design. Learn how CSS Container Queries allow you to create truly modular components that respond to their own size, not the size of the page.","date":"2025-11-10","author":"Sunil Khobragade","imageId":"blog-container-queries","tags":["CSS","Frontend","Web Design","Responsive Design"],"content":"<h2>Beyond Media Queries</h2><p>Use @container rules to adapt components to container size. This enables modular UI components that behave correctly regardless of parent layout.</p><pre><code class=\"language-css\">.card { container-type: inline-size; }\n@container (min-width: 300px) { .card { grid-template-columns: 1fr 2fr; } }\n</code></pre>"}]}
+{
+  "blogs": [
+    {
+      "slug": "crdts-for-real-time-collaboration",
+      "title": "Collaborate in Real-Time: A Developer's Guide to CRDTs",
+      "description": "Dive into Conflict-Free Replicated Data Types (CRDTs), the magic behind real-time collaborative apps like Google Docs, and learn how they enable seamless offline editing.",
+      "date": "2025-11-28",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-crdt",
+      "tags": [
+        "CRDTs",
+        "Real-Time",
+        "Collaboration",
+        "Distributed Systems",
+        "Architecture"
+      ],
+      "content": "<h2>The Challenge of Real-Time Collaboration</h2><p>Building applications where multiple users can edit the same document simultaneously is incredibly complex. How do you merge changes made while users are offline or working concurrently? Conflict-Free Replicated Data Types (CRDTs) are one of the most robust approaches. They provide mathematically proven merge rules so that replicas converge to the same state without requiring locks or centralized coordination.</p><p>CRDTs come in two main flavors: state-based (CvRDTs) and operation-based (CmRDTs). State-based CRDTs periodically exchange state and merge using an associative, commutative, and idempotent operation (typically a join of partially ordered sets). Operation-based CRDTs send commutative operations that can be applied in any order. Both guarantee eventual consistency when all updates propagate.</p><p>One common example is the G-Counter: each replica maintains a vector clock of increments; merging is done by taking the element-wise maximum. For sequences (text), data structures like RGA, Logoot, and LSEQ attach positional identifiers to characters so concurrent inserts can be ordered deterministically.</p><p>Trade-offs include metadata overhead, tombstones for deletions, and complexity when composing CRDTs for rich JSON-like documents. In production, lean toward battle-tested libraries (Automerge, Yjs) and carefully design sync protocols for efficiency. Below is a tiny JavaScript G-Counter example to illustrate the basics.</p><pre><code class=\"language-javascript\">class GCounter {\n  constructor(id, state = {}) { this.id = id; this.state = { ...state }; if (!(this.id in this.state)) this.state[this.id] = 0; }\n  increment(n = 1) { this.state[this.id] = (this.state[this.id] || 0) + n; }\n  value() { return Object.values(this.state).reduce((a,b)=>a+b,0); }\n  merge(other) { for (const [k,v] of Object.entries(other.state)) { this.state[k] = Math.max(this.state[k] || 0, v); } }\n}</code></pre>"
+    },
+    {
+      "slug": "advanced-prompt-engineering-for-ai-agents",
+      "title": "Advanced Prompt Engineering for AI Agents",
+      "description": "Go beyond simple prompts. Learn advanced techniques like Chain-of-Thought, ReAct, and tool definition to build more powerful and reliable AI agents.",
+      "date": "2025-11-25",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-prompt-engineering",
+      "tags": ["AI", "Prompt Engineering", "LLM", "AI Agents", "Genkit"],
+      "content": "<h2>Unlocking the Power of LLMs</h2><p>The quality of your output from a Large Language Model (LLM) is directly tied to the quality of your input. Prompt engineering is the art and science of crafting inputs, system messages, and interaction patterns to guide the model toward reliable, useful outputs. Techniques like Chain-of-Thought (CoT) encourage the model to reason step-by-step; ReAct blends reasoning with tool use; and explicit tool definitions allow agents to call deterministic code or services when appropriate.</p><p>Start with a clear system instruction, then scaffold the task with examples and constraints. When accuracy matters, combine LLM reasoning with deterministic checks (unit tests, verification code). For complex workflows, orchestrate agents with a planner-verifier pattern: the planner proposes steps; the verifier executes or simulates them and flags issues.</p><p>Below is a short Node.js example showing a simple ReAct-style agent that can call a calculator tool when it sees arithmetic operations.</p><pre><code class=\"language-javascript\">// Simple ReAct-like agent skeleton\nasync function agent(prompt, tools) {\n  // naive: if prompt contains \"calc:\" call calculator tool\n  if (prompt.includes('calc:')) {\n    const expr = prompt.split('calc:')[1].trim();\n    return tools.calc(expr);\n  }\n  return 'I need more info.';\n}\nconst tools = { calc: (expr)=>{ try{ return eval(expr).toString(); }catch(e){return 'error';} } }\n(async()=>{ console.log(await agent('Please evaluate calc: 2+3*4', tools)); })();</code></pre>"
+    },
+    {
+      "slug": "serverless-security-best-practices",
+      "title": "Securing Your Serverless Functions: A Guide",
+      "description": "Serverless architectures introduce new security challenges. Learn how to protect your functions from common vulnerabilities like event injection, insecure dependencies, and exces",
+      "date": "2025-11-20",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-serverless-security",
+      "tags": ["Serverless", "Security", "AWS Lambda", "Cloud", "DevOps"],
+      "content": "<h2>A New Security Paradigm</h2><p>Serverless computing abstracts away the underlying infrastructure, but it doesn't abstract away security responsibilities. The attack surface shifts: you must secure event sources, function permissions, environment variables, and dependencies. Least privilege is critical—use function-level IAM roles. Validate and sanitize all inputs; treat events like untrusted data. Avoid embedding secrets in code; use managed secret stores (AWS Secrets Manager, Azure Key Vault).</p><p>Dependency supply-chain attacks are a real risk—pin versions, use vulnerability scanners, and limit runtime capabilities. Implement network controls where possible (VPCs, egress filters). Monitor and log function execution with structured logs and distributed tracing to detect anomalies. Consider function timeouts and circuit breakers to limit blast radius.</p><pre><code class=\"language-javascript\">// Example: simple input validation for AWS Lambda\nexports.handler = async(event)=>{\n  const body = JSON.parse(event.body || '{}');\n  if (typeof body.username !== 'string' || body.username.length > 100) {\n    return { statusCode: 400, body: 'invalid username' };\n  }\n  // proceed safely\n  return { statusCode: 200, body: 'ok' };\n};</code></pre>"
+    },
+    {
+      "slug": "edge-computing-for-web-developers",
+      "title": "The Edge is Calling: What Edge Computing Means for Web Developers",
+      "description": "Move beyond the centralized cloud. Learn how edge computing runs your code closer to your users, delivering ultra-low latency and enabling a new class of high-performance applica",
+      "date": "2025-11-15",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-edge-computing",
+      "tags": [
+        "Edge Computing",
+        "Performance",
+        "Cloudflare",
+        "Next.js",
+        "Architecture"
+      ],
+      "content": "<h2>The Need for Speed</h2><p>For years, we've built applications that run in centralized cloud data centers, often hundreds or thousands of miles away from the end-user. The speed of light imposes limits; edge computing brings compute closer to users by running code in CDN PoPs and edge runtimes. This reduces latency, improves responsiveness, and enables novel experiences like personalized content at the edge.</p><p>Edge platforms (Cloudflare Workers, Vercel Edge Functions) provide constrained runtimes—optimize for startup time, avoid heavy native dependencies, and favor streaming responses. Use consistent hashing or sticky routing for session-affine workloads, and design data strategies for eventual consistency: keep ephemeral state at the edge and authoritative state in the origin.</p><pre><code class=\"language-javascript\">// Example Cloudflare Worker response\naddEventListener('fetch', event => {\n  event.respondWith(handle(event.request));\n});\nasync function handle(req) {\n  return new Response('Hello from the edge', { headers: { 'content-type': 'text/plain' } });\n}</code></pre>"
+    },
+    {
+      "slug": "modern-css-a-look-at-container-queries",
+      "title": "Modern CSS is Here: A Look at Container Queries",
+      "description": "Break free from viewport-based design. Learn how CSS Container Queries allow you to create truly modular components that respond to their own size, not the size of the page.",
+      "date": "2025-11-10",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-container-queries",
+      "tags": ["CSS", "Frontend", "Web Design", "Responsive Design"],
+      "content": "<h2>Beyond Media Queries</h2><p>For over a decade, media queries have been the cornerstone of responsive design. We style our layouts based on the viewport width. Container queries flip that model: components can adapt to the size of their container. This enables truly modular UI components that work in any parent layout.</p><p>Use the @container rule with container-type on the parent to enable queries. Container queries shine in design systems where a button or card must adapt depending on available space, not the entire viewport.</p><pre><code class=\"language-css\">.card { container-type: inline-size; }\n@container (min-width: 300px) { .card { grid-template-columns: 1fr 2fr; } }</code></pre>"
+    },
+    {
+      "slug": "javascript-async-await-patterns",
+      "title": "Mastering JavaScript Async/Await: Patterns, Pitfalls, and Best Practices",
+      "description": "A practical guide to async/await in JavaScript: avoiding common pitfalls, error handling, concurrency patterns, and working examples that solve frequent Stack Overflow questions.",
+      "date": "2025-11-29",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-js-async",
+      "tags": ["JavaScript", "Async", "Promises", "Node.js", "Concurrency"],
+      "content": "<h2>Why async/await?</h2><p>Asynchronous programming in JavaScript evolved from callbacks to Promises and then to async/await. The newer syntax makes asynchronous flows easier to read and reason about, but it also brings traps: forgotten awaits, unhandled rejections, and unbounded concurrency. This article covers patterns that solve common issues seen on Stack Overflow and in production code.</p><p>First, always await Promises you need results from. Forgetting to await yields a Promise where a value is expected, leading to subtle bugs. Use try/catch around awaited calls to handle errors, or use Promise.allSettled for multiple independent tasks.</p><p>For concurrency control, prefer Promise.all for parallel tasks that can run together, but beware that a single rejection cancels the whole batch. If tasks are independent, wrap each with its own try/catch, or use Promise.allSettled to collect successes and failures. For rate-limited or large batches, implement a simple worker pool to bound parallelism.</p><p>Below are examples covering error handling, parallelism, and a small pool implementation you can reuse.</p><pre><code class=\"language-javascript\">// Error handling with async/await\nasync function fetchWithRetry(url, retries = 3) {\n  for (let i=0;i<=retries;i++) {\n    try {\n      const res = await fetch(url);\n      if (!res.ok) throw new Error('http '+res.status);\n      return await res.json();\n    } catch (e) {\n      if (i === retries) throw e;\n    }\n  }\n}  \n\n// Simple concurrency pool\nasync function runWithPool(items, worker, concurrency = 5) {\n  const results = [];\n  let i = 0;\n  const runners = Array.from({length: concurrency}).map(async () => {\n    while (i < items.length) {\n      const idx = i++;\n      try { results[idx] = await worker(items[idx]); } catch (e) { results[idx] = { error: e.message }; }\n    }\n  });\n  await Promise.all(runners);\n  return results;\n}\n</code></pre><p>Key takeaways: always handle Promise rejection paths, control concurrency to avoid resource exhaustion, and test async flows thoroughly with mocks or integration tests that simulate latency.</p>"
+    },
+    {
+      "slug": "react-hooks-common-pitfalls",
+      "title": "React Hooks: Avoiding Common Pitfalls with useEffect and Dependencies",
+      "description": "useEffect is powerful but easy to misuse. Learn how to correctly manage dependencies, avoid infinite loops, and structure effects for predictable behavior.",
+      "date": "2025-11-27",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-react-hooks",
+      "tags": ["React", "Hooks", "useEffect", "Frontend", "State Management"],
+      "content": "<h2>Understanding useEffect</h2><p>useEffect runs after render and can be used for subscriptions, side-effects, and data fetching. The dependency array controls when the effect re-runs. A missing dependency can cause stale closures; an extra dependency can cause an infinite loop. The React Hooks ESLint plugin helps enforce correct dependencies, but you still need to reason about identity and memoization.</p><p>When using functions or objects from props/state inside an effect, either include them in the dependency array or wrap them with useCallback/useMemo so their identity is stable. For subscriptions, always return a cleanup function to avoid leaks.</p><pre><code class=\"language-javascript\">// Fetch with abort and proper deps\nimport { useEffect } from 'react';\nfunction useUserData(userId) {\n  useEffect(() => {\n    const controller = new AbortController();\n    fetch(`/api/user/${userId}`, { signal: controller.signal })\n      .then(r=>r.json()).then(data => console.log(data))\n      .catch(e => { if (e.name !== 'AbortError') console.error(e); });\n    return () => controller.abort();\n  }, [userId]);\n}</code></pre><p>Prefer splitting complex effects into multiple smaller effects where each tracks specific dependencies. UseRef can store mutable values that don't trigger re-renders when updated.</p>"
+    },
+    {
+      "slug": "java-nullpointerexception-best-practices",
+      "title": "Java NullPointerException: Diagnose and Prevent with Best Practices",
+      "description": "NullPointerExceptions are ubiquitous in Java. Learn how to diagnose stack traces, use Optional, and adopt coding patterns to eliminate NPEs.",
+      "date": "2025-11-26",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-java-npe",
+      "tags": ["Java", "NullPointerException", "Best Practices", "Optional"],
+      "content": "<h2>Why NPEs Happen</h2><p>NullPointerException (NPE) occurs when code attempts to access a member or call a method on a null reference. Diagnosing them often means reading the stack trace to find the failing line, then tracing how a variable became null. Defensive programming, better APIs, and modern constructs help reduce NPEs.</p><p>Use Optional<T> to represent values that may be absent instead of returning null. In constructors, validate arguments and throw IllegalArgumentException early. When integrating with third-party code or deserialization, validate inputs and map to domain objects with non-null guarantees where possible.</p><pre><code class=\"language-java\">// Using Optional in Java\npublic Optional<String> findName(User user) {\n  return Optional.ofNullable(user)\n    .map(User::getProfile)\n    .map(Profile::getDisplayName);\n}\n</code></pre><p>For legacy codebases, adding annotations like @NonNull and static analysis can catch many issues at compile time. When an NPE occurs in production, augment crash reporting with contextual data so reproducing the null path becomes easier.</p>"
+    },
+    {
+      "slug": "python-typeerror-attributeerror",
+      "title": "Python TypeError & AttributeError: Common Causes and Fixes",
+      "description": "Understand the root causes of TypeError and AttributeError in Python and practical strategies to fix them, with examples and debugging tips.",
+      "date": "2025-11-24",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-python-errors",
+      "tags": ["Python", "TypeError", "AttributeError", "Debugging"],
+      "content": "<h2>TypeError vs AttributeError</h2><p>TypeError occurs when an operation or function is applied to an object of an inappropriate type (e.g., adding an int to a str). AttributeError happens when you try to access an attribute that doesn't exist on an object. Both are frequent on Stack Overflow and usually stem from unexpected input types or wrong assumptions about object shape.</p><p>To debug, inspect the variable types with print/logging or use a debugger. Add type hints to document expected types and run static analyzers (mypy) to catch mismatches early. When dealing with JSON or external data, validate and coerce types before use.</p><pre><code class=\"language-python\">def sum_list(items):\n    // TypeError example: ensure items is iterable of numbers\n    return sum(float(x) for x in items)\n\n# AttributeError example\nclass User:\n    def __init__(self, name):\n        self.name = name\n\nu = User('Alice')\nprint(getattr(u, 'email', 'no-email'))\n</code></pre><p>Use defensive checks and clear error messages to guide callers. When fixing errors from external libraries, wrap calls and translate exceptions into clearer domain-specific errors.</p>"
+    },
+    {
+      "slug": "sql-joins-explained",
+      "title": "SQL JOINs Demystified: INNER, LEFT, RIGHT, and FULL with Practical Examples",
+      "description": "A clear, example-driven explanation of SQL JOINs covering INNER, LEFT, RIGHT, and FULL joins, with sample schemas and performance considerations.",
+      "date": "2025-11-23",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-sql-joins",
+      "tags": ["SQL", "Database", "Joins", "PostgreSQL", "MySQL"],
+      "content": "<h2>Understanding JOINs</h2><p>JOINs combine rows from two or more tables based on related columns. INNER JOIN returns rows with matching keys in both tables. LEFT JOIN returns all rows from the left table and matched rows from the right (NULL when no match). RIGHT JOIN is symmetric. FULL OUTER JOIN returns rows when there is a match in either table.</p><p>Example schema: users(id,name), orders(id,user_id,amount). To list users with their orders use LEFT JOIN; to find orders with valid users use INNER JOIN.</p><pre><code class=\"language-sql\">-- INNER JOIN\nSELECT u.name, o.amount FROM users u\nJOIN orders o ON o.user_id = u.id;\n-- LEFT JOIN users with orders (including users with no orders)\nSELECT u.name, o.amount FROM users u\nLEFT JOIN orders o ON o.user_id = u.id;\n</code></pre><p>For performance, ensure join columns are indexed and prefer smaller result sets when possible. Use EXPLAIN ANALYZE to inspect query plans in Postgres. Avoid unnecessary SELECT * when joining large tables.</p>"
+    },
+    {
+      "slug": "git-merge-rebase-conflicts-workflow",
+      "title": "Git Merge & Rebase Conflicts: Practical Workflows and How to Resolve Them",
+      "description": "Conflicts are a normal part of collaborative Git workflows. Learn safe strategies for merging, rebasing, and resolving conflicts cleanly with examples.",
+      "date": "2025-11-22",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-git-conflicts",
+      "tags": ["Git", "Merge", "Rebase", "Version Control", "DevOps"],
+      "content": "<h2>Merge vs Rebase</h2><p>Merge preserves history and creates a merge commit; rebase rewrites history to create a linear sequence of commits. Use merge for public branches and rebase for cleaning up local work before pushing. Conflicts arise when the same lines were modified differently; resolve them by editing the conflicted files, testing, and then marking resolution with git add and git commit (or git rebase --continue).</p><pre><code class=\"language-bash\"># Resolving a rebase conflict\ngit checkout feature\ngit fetch origin\ngit rebase origin/main\n# edit files to resolve conflicts\ngit add path/to/file\ngit rebase --continue\n</code></pre><p>For complex conflicts, use git mergetool or GUI tools. Communicate with teammates to avoid repeated conflicts on large files and consider smaller, focused pull requests to minimize overlap.</p>"
+    },
+    {
+      "slug": "regex-crafting-common-pitfalls",
+      "title": "Regex Crafting: Common Pitfalls, Performance Tips, and Practical Patterns",
+      "description": "Regular expressions are powerful but can be hard to maintain and slow when misused. Learn practical patterns, escaping rules, and how to avoid catastrophic backtracking.",
+      "date": "2025-11-21",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-regex",
+      "tags": ["Regex", "Pattern Matching", "Performance"],
+      "content": "<h2>Regex: Power and Danger</h2><p>Regexes provide compact ways to match patterns but can quickly become unreadable. Common pitfalls include failing to escape special characters, using greedy quantifiers incorrectly, and writing patterns that cause catastrophic backtracking. Prefer atomic groups or non-backtracking constructs when available, and benchmark with realistic input.</p><p>Use tools like regex101 to test patterns and explain groups. For complex parsing, consider parser libraries instead of regex.</p><pre><code class=\"language-javascript\">// Example: safe email-ish check (simple)\nconst emailRe = /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/;\nconsole.log(emailRe.test('user@example.com'));\n</code></pre><p>When performance matters, avoid nested quantifiers like (.+)+ and anchor patterns when possible.</p>"
+    },
+    {
+      "slug": "docker-image-size-multistage",
+      "title": "Reducing Docker Image Size: Multi-Stage Builds and Practical Tips",
+      "description": "Large Docker images slow deployments and increase attack surface. Learn multi-stage builds, dependency pruning, and caching strategies to produce lean images.",
+      "date": "2025-11-19",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-docker-size",
+      "tags": ["Docker", "Containers", "DevOps", "CI/CD"],
+      "content": "<h2>Why Image Size Matters</h2><p>Big images lead to slow CI, network transfer delays, and larger attack surfaces. Multi-stage builds let you compile or build artifacts in a heavy image and copy only the runtime artifacts into a slim final image. Use official minimal base images (alpine, distroless) and remove build tools in final stages. Leverage layer caching: order Dockerfile commands from least to most frequently changed.</p><pre><code class=\"language-dockerfile\"># Example multi-stage Node build\nFROM node:18 AS build\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci\nCOPY . ./\nRUN npm run build\n\nFROM node:18-alpine\nWORKDIR /app\nCOPY --from=build /app/dist ./dist\nCOPY --from=build /app/package.json ./package.json\nCMD [\"node\",\"dist/index.js\"]</code></pre><p>Also scan images for vulnerabilities and minimize installed packages.</p>"
+    },
+    {
+      "slug": "kubernetes-deployments-rolling-updates",
+      "title": "Kubernetes Deployments & Rolling Updates: Strategies for Zero Downtime",
+      "description": "Understand Deployment strategies in Kubernetes, rolling updates, readiness/liveness probes, and how to perform safe rollbacks.",
+      "date": "2025-11-18",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-k8s-deploy",
+      "tags": ["Kubernetes", "DevOps", "Deployments", "Cloud"],
+      "content": "<h2>Rolling Updates and Health Checks</h2><p>Kubernetes Deployments support rolling updates by progressively replacing pods. Configure readiness probes so only healthy pods receive traffic. Liveness probes detect and restart unhealthy containers. Use maxUnavailable and maxSurge to control deployment speed and availability. When rolling back, use kubectl rollout undo to revert to a previous revision.</p><pre><code class=\"language-yaml\">apiVersion: apps/v1\nkind: Deployment\nspec:\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxUnavailable: 1\n      maxSurge: 1\n  template:\n    spec:\n      containers:\n      - name: app\n        readinessProbe:\n          httpGet:\n            path: /health\n            port: 8080\n</code></pre><p>Test upgrades in staging and use canary deployments for riskier changes.</p>"
+    },
+    {
+      "slug": "oauth2-authorization-code-flow",
+      "title": "Implementing OAuth2 Authorization Code Flow: A Developer's Guide",
+      "description": "Implement OAuth2 Authorization Code flow securely, including PKCE for public clients, token exchange, and refresh tokens best practices.",
+      "date": "2025-11-17",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-oauth2",
+      "tags": ["OAuth2", "Security", "Authentication"],
+      "content": "<h2>Authorization Code Flow</h2><p>The OAuth2 Authorization Code flow is the most secure flow for server-side applications. The client redirects users to the authorization server, receives an authorization code, and exchanges it for tokens using a confidential client secret. For public clients (mobile, SPAs), use PKCE to prevent interception of the code. Always validate redirect URIs strictly and store refresh tokens securely on the server.</p><pre><code class=\"language-javascript\">// Example: exchange code for token (Node/express)\napp.post('/oauth/callback', async (req,res)=>{\n  const code = req.query.code;\n  const resp = await fetch('https://auth.example.com/token', {\n    method:'POST', body: new URLSearchParams({ grant_type:'authorization_code', code, redirect_uri:'https://app.example.com/oauth/callback', client_id:process.env.CLIENT_ID, client_secret:process.env.CLIENT_SECRET })\n  });\n  const data = await resp.json();\n  // store tokens securely in session or DB\n  res.json(data);\n});</code></pre><p>Rotate client secrets and monitor token lifetimes. Prefer short-lived access tokens and use refresh tokens carefully.</p>"
+    },
+    {
+      "slug": "nodejs-express-error-handling",
+      "title": "Node.js Express Error Handling: Async Middleware and Best Practices",
+      "description": "Handle errors in Express apps reliably, including async middleware, structured error responses, and centralized error logging.",
+      "date": "2025-11-16",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-node-error",
+      "tags": ["Node.js", "Express", "Error Handling", "Backend"],
+      "content": "<h2>Centralized Error Handling</h2><p>Express requires error-handling middleware to centralize responses. With async/await, always catch errors or use wrapper helpers that forward rejections to next(err). Structure error objects with HTTP status, code, and message to standardize client handling. Log stack traces and contextual data to a structured logger but avoid leaking internals to clients.</p><pre><code class=\"language-javascript\">// async wrapper\nconst asyncHandler = fn => (req,res,next) => Promise.resolve(fn(req,res,next)).catch(next);\napp.get('/users/:id', asyncHandler(async (req,res)=>{\n  const user = await db.getUser(req.params.id);\n  if(!user) return res.status(404).json({error:'not found'});\n  res.json(user);\n}));\n\n// error middleware\napp.use((err,req,res,next)=>{\n  console.error(err);\n  res.status(err.status || 500).json({ error: err.message || 'internal' });\n});</code></pre><p>Use centralized error codes and map to appropriate HTTP statuses. For operational alerts, integrate with APM and error-tracking systems.</p>"
+    },
+    {
+      "slug": "postgres-indexing-query-performance",
+      "title": "PostgreSQL Indexing & Query Performance: Practical Tips and Examples",
+      "description": "Improve SQL performance with the right indexes, query rewrites, and use of EXPLAIN ANALYZE. Learn when indexes help and when they hurt.",
+      "date": "2025-11-14",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-postgres-index",
+      "tags": ["PostgreSQL", "Indexing", "Performance"],
+      "content": "<h2>Choose Indexes Wisely</h2><p>Indexes speed up lookups but add write overhead and storage. Use b-tree indexes for equality and range queries, GIN for full-text and array contains, and hash for specific equality workloads (Postgres now supports hashed indexes better). Composite indexes match multi-column WHERE clauses—use column order carefully to match query predicates.</p><pre><code class=\"language-sql\">-- create index for queries filtering by user_id and created_at\nCREATE INDEX idx_orders_user_created ON orders (user_id, created_at DESC);\n</code></pre><p>Always verify with EXPLAIN ANALYZE. Avoid SELECT * and fetch only needed columns. For large analytic queries, consider materialized views or summary tables updated periodically.</p>"
+    },
+    {
+      "slug": "csharp-async-deadlocks",
+      "title": "C# async/await Deadlocks: Why They Happen and How to Avoid Them",
+      "description": "Understand common deadlock patterns with async/await in .NET and how to write deadlock-free asynchronous code using ConfigureAwait and best practices.",
+      "date": "2025-11-13",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-csharp-async",
+      "tags": ["C#", "async", "Deadlock", ".NET"],
+      "content": "<h2>SynchronizationContext and Deadlocks</h2><p>Deadlocks often occur when synchronous code blocks waiting for an async Task that tries to resume on the original SynchronizationContext (e.g., UI thread). The classic mistake is calling Task.Result or Task.Wait inside a context that captures continuations. Avoid blocking on async code. Use async all the way or use ConfigureAwait(false) in library code to avoid capturing contexts.</p><pre><code class=\"language-csharp\">// bad - can deadlock\nvar result = MyAsyncMethod().Result;\n\n// better: async all the way\nvar result = await MyAsyncMethod();\n\n// library code: avoid capturing context\nawait SomeIoOperation().ConfigureAwait(false);</code></pre><p>Prefer asynchronous APIs throughout the stack and be mindful of contexts when integrating with legacy synchronous code.</p>"
+    },
+    {
+      "slug": "css-flexbox-vs-grid-centering",
+      "title": "CSS Layout: Flexbox vs Grid and Practical Centering Patterns",
+      "description": "A practical comparison of Flexbox and Grid for modern layouts, including centering techniques and responsive strategies.",
+      "date": "2025-11-12",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-css-layout",
+      "tags": ["CSS", "Flexbox", "Grid", "Frontend"],
+      "content": "<h2>When to Use Flexbox or Grid</h2><p>Flexbox excels for 1D layouts (rows or columns), while Grid is ideal for 2D layouts. For centering both vertically and horizontally, Flexbox offers a concise solution: set display:flex; align-items:center; justify-content:center; on the parent. Grid can achieve similar outcomes and is more powerful for aligning multiple items on both axes.</p><pre><code class=\"language-css\">.center { display: flex; align-items: center; justify-content: center; height: 200px; }</code></pre><p>Use CSS variables and utility classes for consistent spacing and responsive behavior across components.</p>"
+    },
+    {
+      "slug": "unit-testing-best-practices",
+      "title": "Unit Testing Best Practices: Writing Reliable Tests with Jest and PyTest",
+      "description": "Write maintainable unit tests that catch regressions without being brittle. Examples in Jest (JavaScript) and PyTest (Python) show patterns for isolation and clarity.",
+      "date": "2025-11-11",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-testing",
+      "tags": ["Testing", "Jest", "PyTest", "Quality Assurance"],
+      "content": "<h2>Principles of Good Unit Tests</h2><p>Good unit tests are fast, deterministic, and isolated. Use mocks to isolate external systems and fixtures to set up known states. Keep tests small and descriptive. For JavaScript, Jest provides snapshot testing and powerful mocking. In Python, PyTest fixtures and parametrization make tests expressive and reusable.</p><pre><code class=\"language-javascript\">// Jest example\ntest('adds two numbers', ()=>{ expect(add(1,2)).toBe(3); });\n</code></pre><pre><code class=\"language-python\"># pytest example\ndef test_sum():\n    assert sum([1,2,3]) == 6\n</code></pre><p>Run tests in CI and measure coverage, but don't chase 100% coverage at the expense of meaningful assertions.</p>"
+    },
+    {
+      "slug": "redis-caching-patterns",
+      "title": "Redis Caching Patterns: Cache Aside, Read-Through, and Invalidation",
+      "description": "Design effective caching strategies with Redis: cache-aside, read-through, write-through, and safe invalidation patterns to avoid stale data.",
+      "date": "2025-11-09",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-redis",
+      "tags": ["Redis", "Caching", "Performance"],
+      "content": "<h2>Cache Aside Pattern</h2><p>Cache-aside is the simplest: the application checks cache first, falls back to the DB on miss, then populates the cache. For writes, update the DB first, then invalidate or update the cache to avoid race conditions. For high update rates, use short TTLs or versioned keys to avoid stale reads.</p><pre><code class=\"language-javascript\">// Node example: cache-aside\nasync function getUser(id) {\n  const key = `user:${id}`;\n  let json = await redis.get(key);\n  if (json) return JSON.parse(json);\n  const user = await db.getUser(id);\n  await redis.set(key, JSON.stringify(user), 'EX', 60);\n  return user;\n}</code></pre><p>For complex invalidation, consider using message queues to broadcast invalidation events to multiple caches.</p>"
+    },
+    {
+      "slug": "debugging-memory-leaks",
+      "title": "Debugging Memory Leaks: Browser and Server-Side Techniques",
+      "description": "Find and fix memory leaks in JavaScript (browser) and server applications. Learn heap snapshots, allocation tracking, and common leak sources.",
+      "date": "2025-11-08",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-memory-leaks",
+      "tags": ["Debugging", "Memory", "Performance"],
+      "content": "<h2>Common Leak Patterns</h2><p>Memory leaks stem from retained references, global caches, event listeners not removed, or unbounded queues. In browsers, use DevTools heap snapshots and allocation timelines to find detached DOM nodes and retained objects. On Node.js, use heapdump or built-in inspector to capture heap snapshots and trace memory growth.</p><pre><code class=\"language-javascript\">// Example: avoid leaking event listeners\nfunction attach(node) {\n  function onClick() { /* ... */ }\n  node.addEventListener('click', onClick);\n  return ()=> node.removeEventListener('click', onClick);\n}</code></pre><p>For servers, monitor RSS/heap metrics and add alerts for sustained growth. Use sampling profilers to pinpoint hotspots.</p>"
+    },
+    {
+      "slug": "binary-search-algorithms-pitfalls",
+      "title": "Binary Search: Implementations, Off-By-One Pitfalls, and Robust Variants",
+      "description": "Binary search is a foundational algorithm but error-prone. Learn correct loop invariants, common off-by-one bugs, and templates for lower/upper bounds.",
+      "date": "2025-11-07",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-binary-search",
+      "tags": ["Algorithms", "Binary Search", "Programming"],
+      "content": "<h2>Loop Invariants Matter</h2><p>Binary search fails more often from off-by-one mistakes than from the idea itself. Choose a template and stick to it—either inclusive low/high or half-open intervals [low, high) and carefully update pointers. For finding lower/upper bounds, prefer the half-open idiom to avoid infinite loops.</p><pre><code class=\"language-python\"># lower bound: first index >= target\ndef lower_bound(arr, target):\n    lo, hi = 0, len(arr)\n    while lo < hi:\n        mid = (lo+hi)//2\n        if arr[mid] < target:\n            lo = mid+1\n        else:\n            hi = mid\n    return lo</code></pre><p>Test binary search against small arrays and edge cases: empty array, single element, all-equal elements.</p>"
+    },
+    {
+      "slug": "secure-file-uploads-validation",
+      "title": "Secure File Uploads: Validation, Storage, and Malware Scanning",
+      "description": "Handling user file uploads safely—validate content, enforce size limits, scan for malware, and store files securely in object storage.",
+      "date": "2025-11-06",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-file-uploads",
+      "tags": ["Security", "File Upload", "Backend"],
+      "content": "<h2>Never Trust File Metadata</h2><p>Attackers can disguise malware by changing extensions or headers. Validate MIME type on the server, check file signatures (magic bytes), and enforce size limits. Store uploads outside the application server root and serve via signed URLs from object storage. Scan uploads with malware scanners and strip executable permissions.</p><pre><code class=\"language-javascript\">// Example: express multer with simple validation\nconst multer = require('multer');\nconst upload = multer({ dest: '/tmp/uploads', limits: { fileSize: 10*1024*1024 } });\napp.post('/upload', upload.single('file'), (req,res)=>{\n  const file = req.file;\n  if (!file.mimetype.startsWith('image/')) return res.status(400).send('only images');\n  // further validation and move to object storage\n  res.send('ok');\n});</code></pre><p>Use content-disarm-and-reconstruct (CDR) for complex documents when needed and log uploads for audit trails.</p>"
+    },
+    {
+      "slug": "python-django-performance-tips",
+      "title": "Python & Django Performance Tips: Query Optimization and Caching",
+      "description": "Speed up Django apps with query optimization, select_related/prefetch_related, caching strategies, and profiling tips.",
+      "date": "2025-11-05",
+      "author": "Sunil Khobragade",
+      "imageId": "blog-django-performance",
+      "tags": ["Python", "Django", "Performance"],
+      "content": "<h2>Optimize Database Access</h2><p>Database queries are often the slowest part of web apps. Use select_related for foreign-key joins and prefetch_related for many-to-many relations to avoid N+1 queries. Profile queries with Django Debug Toolbar and slow query logs. Cache fragment or view-level responses with Redis and invalidate carefully.</p><pre><code class=\"language-python\"># avoid N+1 with select_related\nqs = Post.objects.select_related('author').all()\nfor p in qs:\n    print(p.author.name)</code></pre><p>Use connection pooling and tune database settings. For CPU-bound tasks, offload to background workers (Celery, RQ).</p>"
+    }
+  ]
+}

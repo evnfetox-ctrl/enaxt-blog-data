@@ -111,15 +111,15 @@
       "content": "<h2>Merge vs Rebase</h2><p>Merge preserves history and creates a merge commit; rebase rewrites history to create a linear sequence of commits. Use merge for public branches and rebase for cleaning up local work before pushing. Conflicts arise when the same lines were modified differently; resolve them by editing the conflicted files, testing, and then marking resolution with git add and git commit (or git rebase --continue).</p><pre><code class=\"language-bash\"># Resolving a rebase conflict\ngit checkout feature\ngit fetch origin\ngit rebase origin/main\n# edit files to resolve conflicts\ngit add path/to/file\ngit rebase --continue\n</code></pre><p>For complex conflicts, use git mergetool or GUI tools. Communicate with teammates to avoid repeated conflicts on large files and consider smaller, focused pull requests to minimize overlap.</p>"
     },
     {
-      "slug": "regex-crafting-common-pitfalls",
-      "title": "Regex Crafting: Common Pitfalls, Performance Tips, and Practical Patterns",
-      "description": "Regular expressions are powerful but can be hard to maintain and slow when misused. Learn practical patterns, escaping rules, and how to avoid catastrophic backtracking.",
-      "date": "2025-11-21",
-      "author": "Sunil Khobragade",
-      "imageId": "blog-regex",
-      "tags": ["Regex", "Pattern Matching", "Performance"],
-      "content": "<h2>Regex: Power and Danger</h2><p>Regexes provide compact ways to match patterns but can quickly become unreadable. Common pitfalls include failing to escape special characters, using greedy quantifiers incorrectly, and writing patterns that cause catastrophic backtracking. Prefer atomic groups or non-backtracking constructs when available, and benchmark with realistic input.</p><p>Use tools like regex101 to test patterns and explain groups. For complex parsing, consider parser libraries instead of regex.</p><pre><code class=\"language-javascript\">// Example: safe email-ish check (simple)\nconst emailRe = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;\nconsole.log(emailRe.test('user@example.com'));\n</code></pre><p>When performance matters, avoid nested quantifiers like (.+)+ and anchor patterns when possible.</p>"
-    },
+  "slug": "regex-crafting-common-pitfalls",
+  "title": "Regex Crafting: Common Pitfalls, Performance Tips, and Practical Patterns",
+  "description": "Regular expressions are powerful but can be hard to maintain and slow when misused. Learn practical patterns, escaping rules, and how to avoid catastrophic backtracking.",
+  "date": "2025-11-21",
+  "author": "Sunil Khobragade",
+  "imageId": "blog-regex",
+  "tags": ["Regex", "Pattern Matching", "Performance"],
+  "content": "<h2>Regex: Power and Danger</h2><p>Regexes provide compact ways to match patterns but can quickly become unreadable. Common pitfalls include failing to escape special characters, using greedy quantifiers incorrectly, and writing patterns that cause catastrophic backtracking. Prefer atomic groups or non-backtracking constructs when available, and benchmark with realistic input.</p><p>Use tools like regex101 to test patterns and explain groups. For complex parsing, consider parser libraries instead of regex.</p><pre><code class=\"language-javascript\">// Example: safe email-ish check (simple)\nconst emailRe = /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/;\nconsole.log(emailRe.test('user@example.com'));\n</code></pre><p>When performance matters, avoid nested quantifiers like (.+)+ and anchor patterns when possible.</p>"
+},
     {
       "slug": "docker-image-size-multistage",
       "title": "Reducing Docker Image Size: Multi-Stage Builds and Practical Tips",

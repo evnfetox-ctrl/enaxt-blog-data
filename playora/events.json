@@ -15,7 +15,7 @@
     "currentAttendees": 1,
     "isFeatured":1,
     "host": "Leo",
-    "startTime": "2024-09-15T19:00:00.000Z",
+    "startTime": "2026-09-15T19:00:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": true
@@ -34,7 +34,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Sophia",
-    "startTime": "2024-09-20T18:30:00.000Z",
+    "startTime": "2026-09-20T18:30:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": false
@@ -53,7 +53,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 3,
     "isFeatured":1, "host": "Arthur",
-    "startTime": "2024-09-22T20:00:00.000Z",
+    "startTime": "2026-09-22T20:00:00.000Z",
     "timezone": "Europe/London",
     "performers": 1,
     "isHostVerified": true
@@ -72,7 +72,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Chloé",
-    "startTime": "2024-10-01T14:00:00.000Z",
+    "startTime": "2026-10-01T14:00:00.000Z",
     "timezone": "Europe/Paris",
     "performers": 1,
     "isHostVerified": true
@@ -91,7 +91,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Kai",
-    "startTime": "2024-10-05T08:00:00.000Z",
+    "startTime": "2026-10-05T08:00:00.000Z",
     "timezone": "Australia/Sydney",
     "performers": 1,
     "isHostVerified": false
@@ -110,7 +110,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Yuki",
-    "startTime": "2024-10-10T19:00:00.000Z",
+    "startTime": "2026-10-10T19:00:00.000Z",
     "timezone": "Asia/Tokyo",
     "performers": 1,
     "isHostVerified": true
@@ -129,7 +129,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Lena",
-    "startTime": "2024-10-12T17:00:00.000Z",
+    "startTime": "2026-10-12T17:00:00.000Z",
     "timezone": "Europe/Berlin",
     "performers": 1,
     "isHostVerified": true
@@ -148,7 +148,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Mikey",
-    "startTime": "2024-10-18T20:30:00.000Z",
+    "startTime": "2026-10-18T20:30:00.000Z",
     "timezone": "America/Chicago",
     "performers": 1,
     "isHostVerified": false
@@ -167,7 +167,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Rachel",
-    "startTime": "2024-10-25T18:00:00.000Z",
+    "startTime": "2026-10-25T18:00:00.000Z",
     "timezone": "America/Toronto",
     "performers": 1,
     "isHostVerified": true
@@ -186,7 +186,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 3,
     "isFeatured":1, "host": "Anaya",
-    "startTime": "2024-11-01T19:00:00.000Z",
+    "startTime": "2026-11-01T19:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 2,
     "isHostVerified": true
@@ -205,7 +205,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Finn",
-    "startTime": "2024-11-05T18:00:00.000Z",
+    "startTime": "2026-11-05T18:00:00.000Z",
     "timezone": "Europe/London",
     "performers": 1,
     "isHostVerified": false
@@ -224,7 +224,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Sofia",
-    "startTime": "2024-11-10T17:00:00.000Z",
+    "startTime": "2026-11-10T17:00:00.000Z",
     "timezone": "America/Mexico_City",
     "performers": 1,
     "isHostVerified": true
@@ -243,7 +243,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Themba",
-    "startTime": "2024-11-15T09:00:00.000Z",
+    "startTime": "2026-11-15T09:00:00.000Z",
     "timezone": "Africa/Johannesburg",
     "performers": 1,
     "isHostVerified": false
@@ -262,7 +262,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Chris",
-    "startTime": "2024-11-20T18:00:00.000Z",
+    "startTime": "2026-11-20T18:00:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": true
@@ -281,7 +281,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Enigma",
-    "startTime": "2024-11-22T21:00:00.000Z",
+    "startTime": "2026-11-22T21:00:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": true
@@ -300,7 +300,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Jax",
-    "startTime": "2024-12-01T19:30:00.000Z",
+    "startTime": "2026-12-01T19:30:00.000Z",
     "timezone": "America/Chicago",
     "performers": 1,
     "isHostVerified": false
@@ -319,7 +319,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 3,
     "isFeatured":1, "host": "Melody",
-    "startTime": "2024-12-04T20:00:00.000Z",
+    "startTime": "2026-12-04T20:00:00.000Z",
     "timezone": "America/Chicago",
     "performers": 1,
     "isHostVerified": true
@@ -338,7 +338,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Jina",
-    "startTime": "2024-12-08T15:00:00.000Z",
+    "startTime": "2026-12-08T15:00:00.000Z",
     "timezone": "Asia/Seoul",
     "performers": 1,
     "isHostVerified": true
@@ -357,7 +357,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Professor Abernathy",
-    "startTime": "2024-12-12T14:00:00.000Z",
+    "startTime": "2026-12-12T14:00:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": true
@@ -376,7 +376,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Wayan",
-    "startTime": "2024-12-15T08:30:00.000Z",
+    "startTime": "2026-12-15T08:30:00.000Z",
     "timezone": "Asia/Makassar",
     "performers": 1,
     "isHostVerified": false
@@ -395,7 +395,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Rhyme",
-    "startTime": "2024-09-18T18:00:00.000Z",
+    "startTime": "2026-09-18T18:00:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": true
@@ -414,7 +414,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Stagehand",
-    "startTime": "2024-09-25T19:30:00.000Z",
+    "startTime": "2026-09-25T19:30:00.000Z",
     "timezone": "Australia/Sydney",
     "performers": 1,
     "isHostVerified": false
@@ -433,7 +433,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Quirk",
-    "startTime": "2024-09-28T20:00:00.000Z",
+    "startTime": "2026-09-28T20:00:00.000Z",
     "timezone": "America/Chicago",
     "performers": 1,
     "isHostVerified": true
@@ -452,7 +452,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The DM",
-    "startTime": "2024-10-02T19:00:00.000Z",
+    "startTime": "2026-10-02T19:00:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": true
@@ -471,7 +471,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Dubliners",
-    "startTime": "2024-10-04T20:30:00.000Z",
+    "startTime": "2026-10-04T20:30:00.000Z",
     "timezone": "Europe/Dublin",
     "performers": 2,
     "isHostVerified": true
@@ -490,7 +490,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Moderator",
-    "startTime": "2024-10-08T19:00:00.000Z",
+    "startTime": "2026-10-08T19:00:00.000Z",
     "timezone": "Europe/London",
     "performers": 1,
     "isHostVerified": false
@@ -509,7 +509,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 3,
     "isFeatured":1, "host": "Alex",
-    "startTime": "2024-10-11T22:00:00.000Z",
+    "startTime": "2026-10-11T22:00:00.000Z",
     "timezone": "America/Vancouver",
     "performers": 1,
     "isHostVerified": true
@@ -528,7 +528,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Casey",
-    "startTime": "2024-10-16T18:30:00.000Z",
+    "startTime": "2026-10-16T18:30:00.000Z",
     "timezone": "Australia/Melbourne",
     "performers": 1,
     "isHostVerified": false
@@ -547,7 +547,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Breezy",
-    "startTime": "2024-10-19T17:00:00.000Z",
+    "startTime": "2026-10-19T17:00:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": true
@@ -566,7 +566,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Thinker",
-    "startTime": "2024-10-23T19:00:00.000Z",
+    "startTime": "2026-10-23T19:00:00.000Z",
     "timezone": "Europe/London",
     "performers": 1,
     "isHostVerified": true
@@ -585,7 +585,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Riddler",
-    "startTime": "2024-10-26T18:00:00.000Z",
+    "startTime": "2026-10-26T18:00:00.000Z",
     "timezone": "America/Denver",
     "performers": 1,
     "isHostVerified": false
@@ -604,7 +604,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Sunny",
-    "startTime": "2024-10-30T21:00:00.000Z",
+    "startTime": "2026-10-30T21:00:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": true
@@ -623,7 +623,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Narrator",
-    "startTime": "2024-11-02T19:30:00.000Z",
+    "startTime": "2026-11-02T19:30:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": false
@@ -642,7 +642,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Genius",
-    "startTime": "2024-11-06T20:00:00.000Z",
+    "startTime": "2026-11-06T20:00:00.000Z",
     "timezone": "Asia/Singapore",
     "performers": 1,
     "isHostVerified": true
@@ -661,7 +661,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Foto",
-    "startTime": "2024-11-08T15:00:00.000Z",
+    "startTime": "2026-11-08T15:00:00.000Z",
     "timezone": "Europe/Rome",
     "performers": 1,
     "isHostVerified": true
@@ -680,7 +680,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Voice",
-    "startTime": "2024-11-12T18:00:00.000Z",
+    "startTime": "2026-11-12T18:00:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": false
@@ -699,7 +699,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Improviser",
-    "startTime": "2024-11-14T19:00:00.000Z",
+    "startTime": "2026-11-14T19:00:00.000Z",
     "timezone": "America/Chicago",
     "performers": 1,
     "isHostVerified": true
@@ -718,7 +718,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Dante",
-    "startTime": "2024-11-18T16:00:00.000Z",
+    "startTime": "2026-11-18T16:00:00.000Z",
     "timezone": "Europe/Rome",
     "performers": 1,
     "isHostVerified": true
@@ -737,7 +737,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Chef",
-    "startTime": "2024-11-21T19:00:00.000Z",
+    "startTime": "2026-11-21T19:00:00.000Z",
     "timezone": "Asia/Bangkok",
     "performers": 1,
     "isHostVerified": true
@@ -756,7 +756,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Anthropologist",
-    "startTime": "2024-11-24T18:30:00.000Z",
+    "startTime": "2026-11-24T18:30:00.000Z",
     "timezone": "Europe/Zurich",
     "performers": 1,
     "isHostVerified": false
@@ -775,7 +775,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Nomad",
-    "startTime": "2024-11-27T19:00:00.000Z",
+    "startTime": "2026-11-27T19:00:00.000Z",
     "timezone": "America/Argentina/Buenos_Aires",
     "performers": 1,
     "isHostVerified": true
@@ -794,7 +794,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Homer",
-    "startTime": "2024-11-30T18:00:00.000Z",
+    "startTime": "2026-11-30T18:00:00.000Z",
     "timezone": "Europe/Athens",
     "performers": 1,
     "isHostVerified": true
@@ -813,7 +813,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Storyteller",
-    "startTime": "2024-12-03T19:00:00.000Z",
+    "startTime": "2026-12-03T19:00:00.000Z",
     "timezone": "Asia/Tokyo",
     "performers": 1,
     "isHostVerified": false
@@ -832,7 +832,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Motivator",
-    "startTime": "2024-12-07T10:00:00.000Z",
+    "startTime": "2026-12-07T10:00:00.000Z",
     "timezone": "Europe/Stockholm",
     "performers": 1,
     "isHostVerified": true
@@ -851,7 +851,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Yogi",
-    "startTime": "2024-12-10T09:00:00.000Z",
+    "startTime": "2026-12-10T09:00:00.000Z",
     "timezone": "Europe/Copenhagen",
     "performers": 1,
     "isHostVerified": true
@@ -870,7 +870,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Grace",
-    "startTime": "2024-12-14T19:00:00.000Z",
+    "startTime": "2026-12-14T19:00:00.000Z",
     "timezone": "Europe/Lisbon",
     "performers": 1,
     "isHostVerified": false
@@ -889,7 +889,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Coach",
-    "startTime": "2024-12-17T19:00:00.000Z",
+    "startTime": "2026-12-17T19:00:00.000Z",
     "timezone": "Asia/Dubai",
     "performers": 1,
     "isHostVerified": true
@@ -908,7 +908,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Orator",
-    "startTime": "2024-12-19T18:00:00.000Z",
+    "startTime": "2026-12-19T18:00:00.000Z",
     "timezone": "Europe/Madrid",
     "performers": 1,
     "isHostVerified": true
@@ -927,7 +927,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Guru",
-    "startTime": "2025-01-08T17:00:00.000Z",
+    "startTime": "2026-01-08T17:00:00.000Z",
     "timezone": "Europe/Helsinki",
     "performers": 1,
     "isHostVerified": false
@@ -946,7 +946,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Digital Nomad",
-    "startTime": "2025-01-11T16:00:00.000Z",
+    "startTime": "2026-01-11T16:00:00.000Z",
     "timezone": "Europe/Amsterdam",
     "performers": 1,
     "isHostVerified": true
@@ -965,7 +965,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Brand Builder",
-    "startTime": "2025-01-15T19:00:00.000Z",
+    "startTime": "2026-01-15T19:00:00.000Z",
     "timezone": "Asia/Hong_Kong",
     "performers": 1,
     "isHostVerified": true
@@ -984,7 +984,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Techie",
-    "startTime": "2025-01-18T18:00:00.000Z",
+    "startTime": "2026-01-18T18:00:00.000Z",
     "timezone": "Europe/Oslo",
     "performers": 1,
     "isHostVerified": false
@@ -1003,7 +1003,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "DJ Spin",
-    "startTime": "2025-01-22T17:00:00.000Z",
+    "startTime": "2026-01-22T17:00:00.000Z",
     "timezone": "Europe/Madrid",
     "performers": 1,
     "isHostVerified": true
@@ -1022,7 +1022,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Gamer",
-    "startTime": "2025-01-25T19:00:00.000Z",
+    "startTime": "2026-01-25T19:00:00.000Z",
     "timezone": "Europe/Brussels",
     "performers": 1,
     "isHostVerified": false
@@ -1041,7 +1041,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Cinephile",
-    "startTime": "2025-01-28T19:30:00.000Z",
+    "startTime": "2026-01-28T19:30:00.000Z",
     "timezone": "Europe/Prague",
     "performers": 1,
     "isHostVerified": true
@@ -1060,7 +1060,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Brewmaster",
-    "startTime": "2025-02-01T14:00:00.000Z",
+    "startTime": "2026-02-01T14:00:00.000Z",
     "timezone": "Europe/Berlin",
     "performers": 1,
     "isHostVerified": true
@@ -1079,7 +1079,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Gardener",
-    "startTime": "2025-02-05T11:00:00.000Z",
+    "startTime": "2026-02-05T11:00:00.000Z",
     "timezone": "Europe/Vienna",
     "performers": 1,
     "isHostVerified": false
@@ -1098,7 +1098,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Saver",
-    "startTime": "2025-02-08T18:00:00.000Z",
+    "startTime": "2026-02-08T18:00:00.000Z",
     "timezone": "Europe/Zurich",
     "performers": 1,
     "isHostVerified": true
@@ -1117,7 +1117,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Activist",
-    "startTime": "2025-02-12T19:00:00.000Z",
+    "startTime": "2026-02-12T19:00:00.000Z",
     "timezone": "Atlantic/Reykjavik",
     "performers": 1,
     "isHostVerified": true
@@ -1136,7 +1136,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Master Wu",
-    "startTime": "2025-02-15T14:00:00.000Z",
+    "startTime": "2026-02-15T14:00:00.000Z",
     "timezone": "Asia/Shanghai",
     "performers": 1,
     "isHostVerified": true
@@ -1155,7 +1155,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Kami",
-    "startTime": "2025-02-19T16:00:00.000Z",
+    "startTime": "2026-02-19T16:00:00.000Z",
     "timezone": "Asia/Tokyo",
     "performers": 1,
     "isHostVerified": false
@@ -1174,7 +1174,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Astrologer",
-    "startTime": "2025-02-22T18:30:00.000Z",
+    "startTime": "2026-02-22T18:30:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": true
@@ -1193,7 +1193,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Dancer",
-    "startTime": "2025-02-26T17:00:00.000Z",
+    "startTime": "2026-02-26T17:00:00.000Z",
     "timezone": "America/Havana",
     "performers": 1,
     "isHostVerified": true
@@ -1212,7 +1212,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Alchemist",
-    "startTime": "2025-03-01T13:00:00.000Z",
+    "startTime": "2026-03-01T13:00:00.000Z",
     "timezone": "Asia/Seoul",
     "performers": 1,
     "isHostVerified": false
@@ -1231,7 +1231,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Master Lin",
-    "startTime": "2025-03-05T15:00:00.000Z",
+    "startTime": "2026-03-05T15:00:00.000Z",
     "timezone": "Asia/Shanghai",
     "performers": 1,
     "isHostVerified": true
@@ -1250,7 +1250,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Sommelier",
-    "startTime": "2025-03-08T18:00:00.000Z",
+    "startTime": "2026-03-08T18:00:00.000Z",
     "timezone": "Europe/Paris",
     "performers": 1,
     "isHostVerified": true
@@ -1269,7 +1269,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Birder",
-    "startTime": "2025-03-12T08:00:00.000Z",
+    "startTime": "2026-03-12T08:00:00.000Z",
     "timezone": "America/Sao_Paulo",
     "performers": 1,
     "isHostVerified": false
@@ -1288,7 +1288,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 3,
     "isFeatured":1, "host": "The Voodooist",
-    "startTime": "2025-03-15T21:00:00.000Z",
+    "startTime": "2026-03-15T21:00:00.000Z",
     "timezone": "America/Chicago",
     "performers": 1,
     "isHostVerified": true
@@ -1307,7 +1307,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Memorist",
-    "startTime": "2025-03-19T19:00:00.000Z",
+    "startTime": "2026-03-19T19:00:00.000Z",
     "timezone": "Asia/Shanghai",
     "performers": 1,
     "isHostVerified": true
@@ -1326,7 +1326,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Kerouac",
-    "startTime": "2025-03-22T20:00:00.000Z",
+    "startTime": "2026-03-22T20:00:00.000Z",
     "timezone": "America/Los_Angeles",
     "performers": 1,
     "isHostVerified": false
@@ -1345,7 +1345,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Chef Antoine",
-    "startTime": "2025-03-25T20:00:00.000Z",
+    "startTime": "2026-03-25T20:00:00.000Z",
     "timezone": "Europe/Paris",
     "performers": 1,
     "isHostVerified": true
@@ -1364,7 +1364,7 @@
     "attendeeLimit": 1,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Master Kaito",
-    "startTime": "2025-03-28T10:00:00.000Z",
+    "startTime": "2026-03-28T10:00:00.000Z",
     "timezone": "Asia/Tokyo",
     "performers": 1,
     "isHostVerified": true
@@ -1383,7 +1383,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Librarian",
-    "startTime": "2025-04-01T18:00:00.000Z",
+    "startTime": "2026-04-01T18:00:00.000Z",
     "timezone": "Europe/Helsinki",
     "performers": 1,
     "isHostVerified": false
@@ -1402,7 +1402,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Curator",
-    "startTime": "2025-04-04T21:00:00.000Z",
+    "startTime": "2026-04-04T21:00:00.000Z",
     "timezone": "Europe/Berlin",
     "performers": 1,
     "isHostVerified": true
@@ -1421,7 +1421,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Marco",
-    "startTime": "2025-04-08T09:00:00.000Z",
+    "startTime": "2026-04-08T09:00:00.000Z",
     "timezone": "Europe/Rome",
     "performers": 1,
     "isHostVerified": true
@@ -1440,7 +1440,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Insider",
-    "startTime": "2025-04-11T16:00:00.000Z",
+    "startTime": "2026-04-11T16:00:00.000Z",
     "timezone": "America/New_York",
     "performers": 1,
     "isHostVerified": true
@@ -1459,7 +1459,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Strategist",
-    "startTime": "2025-04-15T19:00:00.000Z",
+    "startTime": "2026-04-15T19:00:00.000Z",
     "timezone": "Europe/London",
     "performers": 1,
     "isHostVerified": false
@@ -1478,7 +1478,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Whisperer",
-    "startTime": "2025-04-18T21:30:00.000Z",
+    "startTime": "2026-04-18T21:30:00.000Z",
     "timezone": "Europe/Prague",
     "performers": 1,
     "isHostVerified": true
@@ -1497,7 +1497,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Collector",
-    "startTime": "2025-04-22T20:00:00.000Z",
+    "startTime": "2026-04-22T20:00:00.000Z",
     "timezone": "Asia/Tokyo",
     "performers": 1,
     "isHostVerified": true
@@ -1516,7 +1516,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Shanti",
-    "startTime": "2025-04-26T09:00:00.000Z",
+    "startTime": "2026-04-26T09:00:00.000Z",
     "timezone": "Asia/Makassar",
     "performers": 1,
     "isHostVerified": false
@@ -1535,7 +1535,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Rohan",
-    "startTime": "2025-05-01T20:00:00.000Z",
+    "startTime": "2026-05-01T20:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1554,7 +1554,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Priya",
-    "startTime": "2025-05-05T17:30:00.000Z",
+    "startTime": "2026-05-05T17:30:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1573,7 +1573,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Scenta",
-    "startTime": "2025-05-10T15:00:00.000Z",
+    "startTime": "2026-05-10T15:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": false
@@ -1592,7 +1592,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Vikram",
-    "startTime": "2025-05-12T19:00:00.000Z",
+    "startTime": "2026-05-12T19:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1611,7 +1611,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Horologist",
-    "startTime": "2025-05-15T16:00:00.000Z",
+    "startTime": "2026-05-15T16:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1630,7 +1630,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Anya",
-    "startTime": "2025-05-18T22:00:00.000Z",
+    "startTime": "2026-05-18T22:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": false
@@ -1649,7 +1649,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Imran",
-    "startTime": "2025-05-20T20:00:00.000Z",
+    "startTime": "2026-05-20T20:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1668,7 +1668,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Ishita",
-    "startTime": "2025-05-22T19:00:00.000Z",
+    "startTime": "2026-05-22T19:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1687,7 +1687,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Shanti",
-    "startTime": "2025-05-25T11:00:00.000Z",
+    "startTime": "2026-05-25T11:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": false
@@ -1706,7 +1706,7 @@
     "attendeeLimit": 1,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Arjun",
-    "startTime": "2025-05-28T18:00:00.000Z",
+    "startTime": "2026-05-28T18:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1725,7 +1725,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "The Gamemaster",
-    "startTime": "2025-06-01T17:00:00.000Z",
+    "startTime": "2026-06-01T17:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1744,7 +1744,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Aditi",
-    "startTime": "2025-06-05T19:00:00.000Z",
+    "startTime": "2026-06-05T19:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": false
@@ -1763,7 +1763,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "Aakash",
-    "startTime": "2025-06-08T23:00:00.000Z",
+    "startTime": "2026-06-08T23:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1782,7 +1782,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Mira",
-    "startTime": "2025-06-12T10:00:00.000Z",
+    "startTime": "2026-06-12T10:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1801,7 +1801,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 3,
     "isFeatured":1, "host": "The Artist",
-    "startTime": "2025-06-15T20:00:00.000Z",
+    "startTime": "2026-06-15T20:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1820,7 +1820,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Chef Zoya",
-    "startTime": "2025-06-19T19:30:00.000Z",
+    "startTime": "2026-06-19T19:30:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": false
@@ -1839,7 +1839,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "The Postmaster",
-    "startTime": "2025-06-22T18:00:00.000Z",
+    "startTime": "2026-06-22T18:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1858,7 +1858,7 @@
     "attendeeLimit": 2,
     "currentAttendees": 1,
     "isFeatured":1, "host": "Kailash",
-    "startTime": "2025-06-26T14:00:00.000Z",
+    "startTime": "2026-06-26T14:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1877,7 +1877,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 0,
     "isFeatured":1, "host": "Prosenjit",
-    "startTime": "2025-06-29T18:00:00.000Z",
+    "startTime": "2026-06-29T18:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": true
@@ -1896,7 +1896,7 @@
     "attendeeLimit": 3,
     "currentAttendees": 2,
     "isFeatured":1, "host": "The Seeker",
-    "startTime": "2025-07-02T20:00:00.000Z",
+    "startTime": "2026-07-02T20:00:00.000Z",
     "timezone": "Asia/Kolkata",
     "performers": 1,
     "isHostVerified": false
